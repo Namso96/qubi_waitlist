@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Qubi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky: #E8F4FD;
+  --navy: #1A2E4A;
+  --navy-light: #2A4A70;
+  --coral: #FF6B6B;
+  --mint: #4ECDC4;
+  --sunshine: #FFE66D;
+  --lavender: #A78BFA;
+  --white: #FFFFFF;
+  --muted: #6B7A99;
+  --border: rgba(26,46,74,0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--sky);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+.bg-shapes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.08;
+}
+
+.s1 { width: 400px; height: 400px; background: var(--coral); top: -100px; left: -100px; }
+.s2 { width: 300px; height: 300px; background: var(--mint); bottom: 10%; right: -80px; }
+
+nav {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Baloo 2', cursive;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo-dot {
+  width: 10px; height: 10px;
+  background: var(--coral);
+  border-radius: 50%;
+  display: inline-block;
+  animation: bop 2s ease-in-out infinite;
+}
+
+@keyframes bop {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.nav-back {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.nav-back:hover { color: var(--coral); }
+
+.page-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+.page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy-light);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(26,46,74,0.08);
+}
+
+.page-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.page-title span { color: var(--coral); }
+
+.page-meta {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.policy-card {
+  background: var(--white);
+  border: 3px solid var(--navy);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 6px 6px 0 var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--coral), var(--sunshine), var(--mint), var(--lavender));
+}
+
+.policy-section {
+  margin-bottom: 36px;
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-heading {
+  font-family: 'Baloo 2', cursive;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-icon {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--sunshine);
+  border: 2px solid var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.policy-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.policy-text p { margin-bottom: 10px; }
+.policy-text p:last-child { margin-bottom: 0; }
+
+.policy-text ul {
+  margin: 10px 0 10px 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.policy-text ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.policy-text ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-weight: 800;
+}
+
+.highlight-box {
+  background: var(--sky);
+  border: 2px solid var(--mint);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+.divider {
+  height: 2px;
+  background: var(--border);
+  margin: 32px 0;
+  border-radius: 2px;
+}
+
+.contact-box {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+
+.contact-box p {
+  color: rgba(232,244,253,0.8);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.contact-box a {
+  color: var(--sunshine);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media (max-width: 680px) {
+  nav { padding: 16px 20px; }
+  .policy-card { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-shapes">
+  <div class="shape s1"></div>
+  <div class="shape s2"></div>
+</div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    qubi<span class="logo-dot"></span>
+  </a>
+  <a href="/" class="nav-back">← Back to waitlist</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-eyebrow">🔒 Legal</div>
+  <h1 class="page-title">Privacy <span>Policy</span></h1>
+  <p class="page-meta">Last updated: April 2026 · Qubi Toys Ltd · Portsmouth, UK</p>
+
+  <div class="policy-card">
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">👋</div>
+        Who we are
+      </div>
+      <div class="policy-text">
+        <p>Qubi Toys Ltd is a company based in Portsmouth, UK. We are building Qubi — a privacy-first AI toy for children aged 3–10 that runs entirely on-device, with no cloud, no internet requirement, and no data leaving your home.</p>
+        <p>This privacy policy explains how we handle the personal data you provide when signing up to our waitlist at <strong>qubi-toys.co.uk</strong>.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">📋</div>
+        What data we collect
+      </div>
+      <div class="policy-text">
+        <p>When you sign up to our waitlist, we collect:</p>
+        <ul>
+          <li>Your first name and email address</li>
+          <li>Your child's approximate age group</li>
+          <li>Your country and approximate location (via IP address)</li>
+          <li>Your browser type and language preference</li>
+          <li>Your answers to our optional survey questions</li>
+        </ul>
+        <div class="highlight-box">
+          💡 We collect location data only to understand where interest in Qubi is coming from geographically. We do not track or profile you beyond this.
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">🎯</div>
+        Why we collect it
+      </div>
+      <div class="policy-text">
+        <p>We use your data solely to:</p>
+        <ul>
+          <li>Send you updates on Qubi's development progress</li>
+          <li>Notify you of our Kickstarter launch and early-bird pricing</li>
+          <li>Understand what parents care about so we build the right product</li>
+          <li>Estimate geographic demand to inform our launch strategy</li>
+        </ul>
+        <p>The legal basis for processing your data is your consent, given when you submit the signup form.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">🔒</div>
+        How we store it
+      </div>
+      <div class="policy-text">
+        <p>Your data is stored in Google Sheets, accessed only by the Qubi Toys Ltd team. Google's infrastructure is GDPR-compliant and your data is held within the European Economic Area.</p>
+        <p>We do not use any third-party marketing platforms, CRMs, or advertising tools. We do not sell, rent, or share your data with any third parties — ever.</p>
+        <div class="highlight-box">
+          🛡️ We practice what we preach. A company building a privacy-first product for children has no business treating your data carelessly.
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">📧</div>
+        Communications
+      </div>
+      <div class="policy-text">
+        <p>By signing up, you agree to receive occasional emails from us about Qubi's development. We will not spam you. You can expect:</p>
+        <ul>
+          <li>Infrequent build updates (no more than once or twice a month)</li>
+          <li>A Kickstarter launch notification when we go live</li>
+          <li>Your early-bird discount code</li>
+        </ul>
+        <p>You can unsubscribe at any time by replying to any email with "unsubscribe" or by emailing us directly.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">✅</div>
+        Your rights
+      </div>
+      <div class="policy-text">
+        <p>Under UK GDPR, you have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you</li>
+          <li>Request correction of any inaccurate data</li>
+          <li>Request deletion of your data at any time</li>
+          <li>Withdraw your consent at any time</li>
+          <li>Lodge a complaint with the ICO (ico.org.uk)</li>
+        </ul>
+        <p>To exercise any of these rights, simply email us and we will respond within 30 days.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="policy-section">
+      <div class="section-heading">
+        <div class="section-icon">📬</div>
+        Contact us
+      </div>
+      <div class="policy-text">
+        <p>If you have any questions about this policy or how we handle your data, get in touch:</p>
+      </div>
+      <div class="contact-box">
+        <p>
+          <strong style="color:var(--sunshine)">Qubi Toys Ltd</strong><br>
+          Portsmouth, UK<br>
+          Email: <a href="mailto:hello.qubitoys@yahoo.com">hello.qubitoys@yahoo.com</a><br><br>
+          This policy was last updated in April 2026 and applies to data collected via the waitlist at qubi-toys.co.uk.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
