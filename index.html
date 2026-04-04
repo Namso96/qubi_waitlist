@@ -35,7 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── FLOATING SHAPES BACKGROUND ── */
 .bg-shapes {
   position: fixed;
   inset: 0;
@@ -66,7 +65,6 @@ body {
   66% { transform: translate(20px, -25px) rotate(8deg); }
 }
 
-/* ── NAV ── */
 nav {
   position: relative;
   z-index: 10;
@@ -116,7 +114,6 @@ nav {
   50% { transform: scale(1.04); }
 }
 
-/* ── HERO ── */
 .hero {
   position: relative;
   z-index: 1;
@@ -186,7 +183,6 @@ nav {
   animation: fadeUp 0.6s ease 0.2s both;
 }
 
-/* ── BOUNCING BADGES ── */
 .badge-row {
   display: flex;
   gap: 10px;
@@ -223,7 +219,6 @@ nav {
 
 .badge-emoji { font-size: 16px; }
 
-/* ── CHARACTER ILLUSTRATION ── */
 .qubi-char {
   margin: 0 auto 40px;
   width: 160px;
@@ -236,7 +231,6 @@ nav {
   50% { transform: translateY(-12px); }
 }
 
-/* ── SIGNUP CARD ── */
 .signup-wrap {
   display: flex;
   justify-content: center;
@@ -281,8 +275,6 @@ nav {
   margin-bottom: 24px;
   line-height: 1.6;
 }
-
-
 
 .input-group { margin-bottom: 12px; }
 
@@ -379,7 +371,6 @@ nav {
 
 .form-note a { color: var(--coral); text-decoration: none; }
 
-/* ── SUCCESS STATE ── */
 .success-state { display: block; text-align: center; padding: 10px 0; }
 
 .success-emoji {
@@ -477,7 +468,6 @@ nav {
 .copy-btn:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--navy); }
 .ref-note { font-size: 11px; font-weight: 600; color: var(--muted); margin-top: 8px; }
 
-/* ── SURVEY ── */
 .survey-wrap {
   max-width: 560px;
   margin: 60px auto 0;
@@ -610,7 +600,6 @@ nav {
   box-shadow: 6px 6px 0 var(--navy);
 }
 
-/* ── FEATURES SECTION ── */
 .features {
   position: relative;
   z-index: 1;
@@ -680,7 +669,6 @@ nav {
   line-height: 1.7;
 }
 
-/* ── COMPARISON ── */
 .compare-section {
   max-width: 760px;
   margin: 0 auto 100px;
@@ -725,7 +713,6 @@ nav {
 
 .comp-item:last-child { border-bottom: none; }
 
-/* ── STATS BAR ── */
 .stats-bar {
   background: var(--navy);
   padding: 70px 24px;
@@ -767,7 +754,6 @@ nav {
   line-height: 1.5;
 }
 
-/* ── BOTTOM CTA ── */
 .footer-cta {
   padding: 100px 24px;
   text-align: center;
@@ -812,13 +798,11 @@ nav {
   color: var(--muted);
 }
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 680px) {
   nav { padding: 16px 20px; }
   .hero { padding: 30px 20px 50px; }
@@ -841,7 +825,6 @@ nav {
   <div class="shape s4"></div>
 </div>
 
-<!-- ── NAV ── -->
 <nav>
   <div class="nav-logo">
     qubi<span class="logo-dot"></span>
@@ -849,47 +832,34 @@ nav {
   <div class="nav-pill">JOIN FREE TODAY</div>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-eyebrow">
     <div class="live-dot"></div>
     Portsmouth, UK · Privacy-first AI toy · Coming 2026
   </div>
 
-  <!-- Qubi character SVG -->
   <div class="qubi-char">
     <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-      <!-- Body -->
       <rect x="30" y="60" width="100" height="90" rx="30" fill="#FF6B6B"/>
-      <!-- Tummy -->
       <ellipse cx="80" cy="110" rx="32" ry="28" fill="#FF8E8E" opacity="0.5"/>
-      <!-- Head -->
       <circle cx="80" cy="52" r="42" fill="#FFB347"/>
-      <!-- Eyes -->
       <circle cx="66" cy="46" r="9" fill="white"/>
       <circle cx="94" cy="46" r="9" fill="white"/>
       <circle cx="68" cy="47" r="5" fill="#1A2E4A"/>
       <circle cx="96" cy="47" r="5" fill="#1A2E4A"/>
-      <!-- Shine -->
       <circle cx="70" cy="44" r="2" fill="white"/>
       <circle cx="98" cy="44" r="2" fill="white"/>
-      <!-- Smile -->
       <path d="M66 62 Q80 74 94 62" fill="none" stroke="#1A2E4A" stroke-width="3" stroke-linecap="round"/>
-      <!-- Cheeks -->
       <circle cx="56" cy="60" r="8" fill="#FF6B6B" opacity="0.4"/>
       <circle cx="104" cy="60" r="8" fill="#FF6B6B" opacity="0.4"/>
-      <!-- Ears -->
       <circle cx="38" cy="28" r="14" fill="#FFB347"/>
       <circle cx="122" cy="28" r="14" fill="#FFB347"/>
       <circle cx="38" cy="28" r="8" fill="#FF6B6B" opacity="0.5"/>
       <circle cx="122" cy="28" r="8" fill="#FF6B6B" opacity="0.5"/>
-      <!-- Arms -->
-      <ellipse cx="22" cy="100" rx="12" ry="22" rx="12" fill="#FF6B6B" transform="rotate(-20,22,100)"/>
+      <ellipse cx="22" cy="100" rx="12" ry="22" fill="#FF6B6B" transform="rotate(-20,22,100)"/>
       <ellipse cx="138" cy="100" rx="12" ry="22" fill="#FF6B6B" transform="rotate(20,138,100)"/>
-      <!-- Feet -->
       <ellipse cx="60" cy="148" rx="20" ry="10" fill="#E85555"/>
       <ellipse cx="100" cy="148" rx="20" ry="10" fill="#E85555"/>
-      <!-- Tiny backpack hint -->
       <rect x="90" y="75" width="28" height="36" rx="8" fill="#4ECDC4" opacity="0.9"/>
       <rect x="93" y="70" width="8" height="10" rx="4" fill="#4ECDC4"/>
       <rect x="109" y="70" width="8" height="10" rx="4" fill="#4ECDC4"/>
@@ -916,7 +886,6 @@ nav {
     <div class="signup-card" id="signupCard">
       <div class="card-title">Join the Qubi family! 🐾</div>
       <p class="card-sub">Sign up free to get early access, build updates, and your exclusive launch-day invite when we go live on Kickstarter.</p>
-
       <div id="signupForm">
         <div class="input-row">
           <input class="fun-input" id="firstName" type="text" placeholder="Your first name">
@@ -939,7 +908,6 @@ nav {
           By signing up you agree to our <a href="#">privacy policy</a>. We never share your data — fitting, given what we're building.
         </p>
       </div>
-
     </div>
   </div>
 
@@ -966,11 +934,12 @@ nav {
   <!-- SURVEY -->
   <div class="survey-wrap" id="surveySection" style="display:none;">
     <div class="survey-header">
-      <div class="survey-title">Quick! 4 questions 🚀</div>
+      <div class="survey-title">Quick! 6 questions 🚀</div>
       <p class="survey-sub">Help us build the perfect Qubi. Takes 60 seconds, I promise.</p>
     </div>
     <div class="survey-card">
 
+      <!-- Q1 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">1</span>
@@ -987,13 +956,14 @@ nav {
         </div>
       </div>
 
+      <!-- Q2 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">2</span>
           What would you most want Qubi to do with your child?
           <span class="q-type">Pick all that apply</span>
         </div>
-        <div class="opts-list" id="q1Opts">
+        <div class="opts-list" id="q2Opts">
           <button class="opt-btn" onclick="toggleOpt(this)">Tell stories</button>
           <button class="opt-btn" onclick="toggleOpt(this)">Play games</button>
           <button class="opt-btn" onclick="toggleOpt(this)">Open conversations</button>
@@ -1003,13 +973,14 @@ nav {
         </div>
       </div>
 
+      <!-- Q3 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">3</span>
           What would you pay for Qubi?
           <span class="q-type">Single choice</span>
         </div>
-        <div class="opts-grid" id="q2Opts">
+        <div class="opts-grid" id="q3Opts">
           <button class="opt-btn" onclick="selectOne(this,'price')">Under £100</button>
           <button class="opt-btn" onclick="selectOne(this,'price')">£100–150</button>
           <button class="opt-btn" onclick="selectOne(this,'price')">£150–200</button>
@@ -1017,35 +988,38 @@ nav {
         </div>
       </div>
 
+      <!-- Q4 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">4</span>
           Subscription or one-off price?
           <span class="q-type">Single choice</span>
         </div>
-        <div class="opts-list" id="q3Opts">
+        <div class="opts-list" id="q4Opts">
           <button class="opt-btn" onclick="selectOne(this,'sub')">One-off price only — no subscription ever</button>
           <button class="opt-btn" onclick="selectOne(this,'sub')">One-off + optional £2–3/month for new stories</button>
           <button class="opt-btn" onclick="selectOne(this,'sub')">Lower upfront with a subscription is fine</button>
         </div>
       </div>
 
+      <!-- Q5 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">5</span>
           Is there anything you wish existed in a children's toy that you can't find today?
           <span class="q-type">Open answer</span>
         </div>
-        <textarea class="open-txt" id="q4Text" placeholder="e.g. 'a toy that doesn't need Wi-Fi to work'"></textarea>
+        <textarea class="open-txt" id="q5Text" placeholder="e.g. 'a toy that doesn't need Wi-Fi to work'"></textarea>
       </div>
 
+      <!-- Q6 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">6</span>
           What almost stopped you signing up?
           <span class="q-type">Open answer</span>
         </div>
-        <textarea class="open-txt" id="q4Text" placeholder="Be honest — it genuinely helps us build something better!"></textarea>
+        <textarea class="open-txt" id="q6Text" placeholder="Be honest — it genuinely helps us build something better!"></textarea>
       </div>
 
       <button class="survey-btn" onclick="submitSurvey()">Submit my answers! 🚀</button>
@@ -1053,11 +1027,10 @@ nav {
   </div>
 </section>
 
-<!-- ── FEATURES ── -->
+<!-- FEATURES -->
 <section class="features">
   <div class="section-eyebrow">Why Qubi</div>
   <h2 class="section-title">Smart, safe, and<br>seriously fun 🎈</h2>
-
   <div class="features-grid">
     <div class="feat-card">
       <span class="feat-emoji">🧠</span>
@@ -1077,7 +1050,7 @@ nav {
   </div>
 </section>
 
-<!-- ── COMPARISON ── -->
+<!-- COMPARISON -->
 <section class="compare-section">
   <div class="section-eyebrow">The difference</div>
   <h2 class="section-title" style="margin-bottom:36px">Qubi vs the others 👀</h2>
@@ -1105,7 +1078,7 @@ nav {
   </div>
 </section>
 
-<!-- ── STATS ── -->
+<!-- STATS -->
 <section class="stats-bar">
   <div class="stats-inner">
     <div>
@@ -1123,7 +1096,7 @@ nav {
   </div>
 </section>
 
-<!-- ── FOOTER CTA ── -->
+<!-- FOOTER CTA -->
 <section class="footer-cta">
   <div class="section-eyebrow">Join the adventure</div>
   <h2 class="section-title">Be first to bring<br>Qubi home 🏠</h2>
@@ -1131,12 +1104,10 @@ nav {
   <a href="#signupCard" class="cta-btn-big" onclick="document.getElementById('signupCard').scrollIntoView({behavior:'smooth'});return false;">
     Get early access — it's free! 🎉
   </a>
-  <p class="made-in">Qubi Toys Ltd · Portsmouth, UK · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cea6aba2a2a18ebfbbaca7baa1b7bde0ada1">[email&#160;protected]</a></p>
+  <p class="made-in">Qubi Toys Ltd · Portsmouth, UK · hello@qubi-toys.co.uk</p>
 </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-// !! Paste your Google Apps Script Web App URL below !!
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyS4w4NX1blBJcojBdbeFn8sG1GtFgx4EZX3jtEts7d2OV5wZKBNlfou2YVhJfNahwB6g/exec';
 
 async function getUserInfo() {
@@ -1163,12 +1134,10 @@ async function handleSignup() {
     return;
   }
 
-  // Collect browser & location info
   const userInfo = await getUserInfo();
   const browser = navigator.userAgent;
   const language = navigator.language;
 
-  // Save to Google Sheets
   try {
     await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
@@ -1180,12 +1149,10 @@ async function handleSignup() {
     console.warn('Could not save to sheet:', err);
   }
 
-  // Store waitlist position + ref code for later (shown after survey)
   const pos = Math.floor(Math.random() * 200) + 150;
   window._waitlistPos = '#' + pos + ' on the waitlist';
-  window._refCode = 'qubitoys.co/ref/' + Math.random().toString(36).substr(2, 8);
+  window._refCode = 'qubi-toys.co.uk/ref/' + Math.random().toString(36).substr(2, 8);
 
-  // Hide the form, show the survey
   document.getElementById('signupForm').style.display = 'none';
   document.getElementById('signupCard').style.display = 'none';
   const s = document.getElementById('surveySection');
@@ -1210,34 +1177,39 @@ function selectOne(btn, group) {
 }
 
 async function submitSurvey() {
-  // Collect Q1 — multi-select
+  // Q1 — multi-select: what matters most
   const q1 = [...document.querySelectorAll('#q1Opts .opt-btn.selected')]
     .map(b => b.textContent.trim()).join(', ') || 'None selected';
 
-  // Collect Q2 — single select
-  const q2El = document.querySelector('#q2Opts .opt-btn.selected');
-  const q2 = q2El ? q2El.textContent.trim() : 'Not answered';
+  // Q2 — multi-select: what Qubi should do
+  const q2 = [...document.querySelectorAll('#q2Opts .opt-btn.selected')]
+    .map(b => b.textContent.trim()).join(', ') || 'None selected';
 
-  // Collect Q3 — single select
+  // Q3 — single select: price
   const q3El = document.querySelector('#q3Opts .opt-btn.selected');
   const q3 = q3El ? q3El.textContent.trim() : 'Not answered';
 
-  // Collect Q4 — open text
-  const q4 = document.getElementById('q4Text').value.trim() || 'No answer';
+  // Q4 — single select: subscription
+  const q4El = document.querySelector('#q4Opts .opt-btn.selected');
+  const q4 = q4El ? q4El.textContent.trim() : 'Not answered';
 
-  // Post survey data to Google Sheets
+  // Q5 — open text: wish existed
+  const q5 = document.getElementById('q5Text').value.trim() || 'No answer';
+
+  // Q6 — open text: what almost stopped you
+  const q6 = document.getElementById('q6Text').value.trim() || 'No answer';
+
   try {
     await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type: 'survey', q1, q2, q3, q4 })
+      body: JSON.stringify({ type: 'survey', q1, q2, q3, q4, q5, q6 })
     });
   } catch (err) {
     console.warn('Could not save survey:', err);
   }
 
-  // Hide survey, show success state with stored position + ref code
   document.getElementById('surveySection').style.display = 'none';
   document.getElementById('queuePos').textContent = window._waitlistPos || '#247 on the waitlist';
   document.getElementById('refUrl').textContent = window._refCode || 'qubi-toys.co.uk/ref/abc123';
