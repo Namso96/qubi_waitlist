@@ -990,20 +990,36 @@ nav {
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">2</span>
-          What would you pay for Qubi?
-          <span class="q-type">Single choice</span>
+          What would you most want Qubi to do with your child?
+          <span class="q-type">Pick all that apply</span>
         </div>
-        <div class="opts-grid" id="q2Opts">
-          <button class="opt-btn" onclick="selectOne(this,'price')">Under £60</button>
-          <button class="opt-btn" onclick="selectOne(this,'price')">£60–80</button>
-          <button class="opt-btn" onclick="selectOne(this,'price')">£80–100</button>
-          <button class="opt-btn" onclick="selectOne(this,'price')">£100+ if quality is right</button>
+        <div class="opts-list" id="q1Opts">
+          <button class="opt-btn" onclick="toggleOpt(this)">Tell stories</button>
+          <button class="opt-btn" onclick="toggleOpt(this)">Play games</button>
+          <button class="opt-btn" onclick="toggleOpt(this)">Open conversations</button>
+          <button class="opt-btn" onclick="toggleOpt(this)">Bedtime routine/wind-down</button>
+          <button class="opt-btn" onclick="toggleOpt(this)">Answer questions</button>
+          <button class="opt-btn" onclick="toggleOpt(this)">Help with learning/homework</button>
         </div>
       </div>
 
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">3</span>
+          What would you pay for Qubi?
+          <span class="q-type">Single choice</span>
+        </div>
+        <div class="opts-grid" id="q2Opts">
+          <button class="opt-btn" onclick="selectOne(this,'price')">Under £100</button>
+          <button class="opt-btn" onclick="selectOne(this,'price')">£100–150</button>
+          <button class="opt-btn" onclick="selectOne(this,'price')">£150–200</button>
+          <button class="opt-btn" onclick="selectOne(this,'price')">£200+ if quality is right</button>
+        </div>
+      </div>
+
+      <div class="q-block">
+        <div class="q-label">
+          <span class="q-num">4</span>
           Subscription or one-off price?
           <span class="q-type">Single choice</span>
         </div>
@@ -1016,7 +1032,16 @@ nav {
 
       <div class="q-block">
         <div class="q-label">
-          <span class="q-num">4</span>
+          <span class="q-num">5</span>
+          Is there anything you wish existed in a children's toy that you can't find today?
+          <span class="q-type">Open answer</span>
+        </div>
+        <textarea class="open-txt" id="q4Text" placeholder="e.g. 'a toy that doesn't need Wi-Fi to work'"></textarea>
+      </div>
+
+      <div class="q-block">
+        <div class="q-label">
+          <span class="q-num">6</span>
           What almost stopped you signing up?
           <span class="q-type">Open answer</span>
         </div>
