@@ -630,7 +630,7 @@ nav {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -651,6 +651,7 @@ nav {
 .feat-card:nth-child(1) { background: #FFF8E7; }
 .feat-card:nth-child(2) { background: #E8FAF8; }
 .feat-card:nth-child(3) { background: #F3EEFF; }
+.feat-card:nth-child(4) { background: #FFF0F5; }
 
 .feat-emoji { font-size: 36px; margin-bottom: 14px; display: block; }
 
@@ -894,10 +895,10 @@ nav {
         <select class="fun-select" id="childAge">
           <option value="" disabled selected>How old is your child?</option>
           <option>Under 2 years</option>
-          <option>2–3 years</option>
-          <option>3–5 years</option>
-          <option>5–7 years</option>
-          <option>7–10 years</option>
+          <option>2-3 years</option>
+          <option>3-5 years</option>
+          <option>5-7 years</option>
+          <option>7-10 years</option>
           <option>Multiple kids!</option>
         </select>
         <button class="big-btn" onclick="handleSignup()">
@@ -938,8 +939,6 @@ nav {
       <p class="survey-sub">Help us build the perfect Qubi. Takes 60 seconds, I promise.</p>
     </div>
     <div class="survey-card">
-
-      <!-- Q1 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">1</span>
@@ -955,8 +954,6 @@ nav {
           <button class="opt-btn" onclick="toggleOpt(this)">♾️ Works forever — not dependent on a company</button>
         </div>
       </div>
-
-      <!-- Q2 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">2</span>
@@ -972,8 +969,6 @@ nav {
           <button class="opt-btn" onclick="toggleOpt(this)">Help with learning/homework</button>
         </div>
       </div>
-
-      <!-- Q3 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">3</span>
@@ -982,13 +977,11 @@ nav {
         </div>
         <div class="opts-grid" id="q3Opts">
           <button class="opt-btn" onclick="selectOne(this,'price')">Under £100</button>
-          <button class="opt-btn" onclick="selectOne(this,'price')">£100–150</button>
-          <button class="opt-btn" onclick="selectOne(this,'price')">£150–200</button>
+          <button class="opt-btn" onclick="selectOne(this,'price')">£100-150</button>
+          <button class="opt-btn" onclick="selectOne(this,'price')">£150-200</button>
           <button class="opt-btn" onclick="selectOne(this,'price')">£200+ if quality is right</button>
         </div>
       </div>
-
-      <!-- Q4 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">4</span>
@@ -997,12 +990,10 @@ nav {
         </div>
         <div class="opts-list" id="q4Opts">
           <button class="opt-btn" onclick="selectOne(this,'sub')">One-off price only — no subscription ever</button>
-          <button class="opt-btn" onclick="selectOne(this,'sub')">One-off + optional £2–3/month for new stories</button>
+          <button class="opt-btn" onclick="selectOne(this,'sub')">One-off + optional £2-3/month for new stories</button>
           <button class="opt-btn" onclick="selectOne(this,'sub')">Lower upfront with a subscription is fine</button>
         </div>
       </div>
-
-      <!-- Q5 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">5</span>
@@ -1011,8 +1002,6 @@ nav {
         </div>
         <textarea class="open-txt" id="q5Text" placeholder="e.g. 'a toy that doesn't need Wi-Fi to work'"></textarea>
       </div>
-
-      <!-- Q6 -->
       <div class="q-block">
         <div class="q-label">
           <span class="q-num">6</span>
@@ -1021,7 +1010,6 @@ nav {
         </div>
         <textarea class="open-txt" id="q6Text" placeholder="Be honest — it genuinely helps us build something better!"></textarea>
       </div>
-
       <button class="survey-btn" onclick="submitSurvey()">Submit my answers! 🚀</button>
     </div>
   </div>
@@ -1046,6 +1034,11 @@ nav {
       <span class="feat-emoji">♾️</span>
       <div class="feat-title">Works forever</div>
       <p class="feat-desc">In 2024, children cried as their AI companions went dark when servers shut down. Qubi has no servers. Nothing to shut down. It works on day one and in ten years — guaranteed.</p>
+    </div>
+    <div class="feat-card">
+      <span class="feat-emoji">📵</span>
+      <div class="feat-title">No screens — ever</div>
+      <p class="feat-desc">UK children aged 5–10 already spend over 6 hours a day on screens — six times the WHO recommendation. Qubi gives your child all the wonder, imagination, and connection of a best friend, through conversation and play. No screen required, no screen involved.</p>
     </div>
   </div>
 </section>
@@ -1177,26 +1170,15 @@ function selectOne(btn, group) {
 }
 
 async function submitSurvey() {
-  // Q1 — multi-select: what matters most
   const q1 = [...document.querySelectorAll('#q1Opts .opt-btn.selected')]
     .map(b => b.textContent.trim()).join(', ') || 'None selected';
-
-  // Q2 — multi-select: what Qubi should do
   const q2 = [...document.querySelectorAll('#q2Opts .opt-btn.selected')]
     .map(b => b.textContent.trim()).join(', ') || 'None selected';
-
-  // Q3 — single select: price
   const q3El = document.querySelector('#q3Opts .opt-btn.selected');
   const q3 = q3El ? q3El.textContent.trim() : 'Not answered';
-
-  // Q4 — single select: subscription
   const q4El = document.querySelector('#q4Opts .opt-btn.selected');
   const q4 = q4El ? q4El.textContent.trim() : 'Not answered';
-
-  // Q5 — open text: wish existed
   const q5 = document.getElementById('q5Text').value.trim() || 'No answer';
-
-  // Q6 — open text: what almost stopped you
   const q6 = document.getElementById('q6Text').value.trim() || 'No answer';
 
   try {
